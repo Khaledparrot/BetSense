@@ -134,7 +134,7 @@ class CustomFooter extends HTMLElement {
                     <div>
                         <h3 class="footer-links-title">Legal</h3>
                         <div class="footer-links">
-                            <a href="terms-of-service.html" target="_blank" rel="noopener noreferrer" class="footer-link" >Terms of Service</a>
+                            <a href="terms-of-service.html" class="footer-link" >Terms of Service</a>
                             <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
                             <a href="affiliate-disclosure.html" class="footer-link">Affiliate Disclosure</a>
                             <a href="cookie-policy.html" class="footer-link">Cookie Policy</a>
