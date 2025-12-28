@@ -100,10 +100,10 @@ class CustomFooter extends HTMLElement {
                     <div>
                         <div class="footer-logo">
                             <i data-feather="shield" class="footer-logo-icon w-5 h-5"></i>
-                            Mindful Wager
+                            Bet Sense
                         </div>
                         <p class="text-gray-600 text-sm">
-                            Providing transparent, educational resources for responsible gambling since 2023.
+                            Providing transparent, educational resources for responsible gambling since 2024.
                         </p>
                         <p class="footer-disclaimer">
                             Gambling involves risk. We are not responsible for losses. Please play responsibly.
@@ -148,7 +148,7 @@ class CustomFooter extends HTMLElement {
                         18+ Only. Gambling is not legal in all jurisdictions.
                     </div>
                     <div class="footer-copyright">
-                        &copy; 2023 Mindful Wager Academy. All rights reserved.
+                        &copy; 2025 Bet Sense Academy. All rights reserved.
                     </div>
                 </div>
             </div>
