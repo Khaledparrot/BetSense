@@ -107,7 +107,7 @@ class CustomHeader extends HTMLElement {
             <div class="header-container">
                 <a href="index.html" class="logo">
                     <i data-feather="shield" class="logo-icon w-5 h-5"></i>
-                    Mindful Wager
+                    Bet Sense
                 </a>
                 
                 <div class="nav-desktop">
