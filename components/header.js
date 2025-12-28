@@ -106,7 +106,7 @@ class CustomHeader extends HTMLElement {
             </style>
             <div class="header-container">
                 <a href="index.html" class="logo">
-                    <i data-feather="lock" class="logo-icon w-5 h-5"></i>
+                    <img src="ps.jfif" alt="Parisur Logo" class="logo-icon">
                     Parisur
                 </a>
                 
