@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deposit Limit Guide | BetSmart Academy</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+<custom-header></custom-header>
+
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <h1 class="text-3xl font-bold mb-6 text-center">Deposit Limit Guide</h1>
+
+  <p class="mb-4">
+    Setting deposit limits helps you control your gambling budget. Use the tool below to calculate safe deposit amounts based on your monthly income and risk tolerance.
+  </p>
+
+  <div class="bg-white p-6 rounded-lg shadow-sm">
+    <div class="mb-4">
+      <label class="block font-medium mb-1">Monthly Income ($)</label>
+      <input type="number" id="income" class="w-full px-4 py-2 border rounded-lg" placeholder="Enter your monthly income">
+    </div>
+    <div class="mb-4">
+      <label class="block font-medium mb-1">Risk Tolerance (%)</label>
+      <input type="number" id="risk" class="w-full px-4 py-2 border rounded-lg" placeholder="E.g., 5 for 5%">
+    </div>
+    <button id="calculate-deposit" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium mt-2">
+      Calculate Safe Deposit Limit
+    </button>
+
+    <p id="deposit-result" class="mt-4 text-lg font-semibold text-gray-700"></p>
+  </div>
+
+</main>
+
+<custom-footer></custom-footer>
+<custom-bottom-nav></custom-bottom-nav>
+
+<script>
+  const calculateBtn = document.getElementById('calculate-deposit');
+  const incomeInput = document.getElementById('income');
+  const riskInput = document.getElementById('risk');
+  const resultEl = document.getElementById('deposit-result');
+
+  calculateBtn.addEventListener('click', () => {
+    const income = parseFloat(incomeInput.value);
+    const risk = parseFloat(riskInput.value);
+
+    if (isNaN(income) || isNaN(risk) || income <= 0 || risk <= 0) {
+      resultEl.textContent = "Please enter valid positive numbers for income and risk.";
+      resultEl.classList.remove('text-green-600');
+      resultEl.classList.add('text-red-500');
+      return;
+    }
+
+    const safeDeposit = (income * risk) / 100;
+    resultEl.textContent = `Your safe monthly deposit limit is $${safeDeposit.toFixed(2)}`;
+    resultEl.classList.remove('text-red-500');
+    resultEl.classList.add('text-green-600');
+  });
+</script>
+</body>
+</html>

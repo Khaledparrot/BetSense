@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odds Calculator | BetSmart Academy</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+<custom-header></custom-header>
+
+<main class="max-w-4xl mx-auto px-4 py-12">
+  <h1 class="text-3xl font-bold mb-6 text-center">Odds Calculator</h1>
+
+  <p class="mb-4">
+    Calculate your potential winnings based on your stake and the odds provided by gambling platforms.
+  </p>
+
+  <div class="bg-white p-6 rounded-lg shadow-sm">
+    <div class="mb-4">
+      <label class="block font-medium mb-1">Stake ($)</label>
+      <input type="number" id="stake" class="w-full px-4 py-2 border rounded-lg" placeholder="Enter your bet amount">
+    </div>
+
+    <div class="mb-4">
+      <label class="block font-medium mb-1">Odds (Decimal format, e.g., 2.5)</label>
+      <input type="number" step="0.01" id="odds" class="w-full px-4 py-2 border rounded-lg" placeholder="Enter the decimal odds">
+    </div>
+
+    <button id="calculate-odds" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium mt-2">
+      Calculate Winnings
+    </button>
+
+    <p id="odds-result" class="mt-4 text-lg font-semibold text-gray-700"></p>
+  </div>
+
+
+</main>
+
+<custom-footer></custom-footer>
+<custom-bottom-nav></custom-bottom-nav>
+
+<script>
+  const calcBtn = document.getElementById('calculate-odds');
+  const stakeInput = document.getElementById('stake');
+  const oddsInput = document.getElementById('odds');
+  const oddsResult = document.getElementById('odds-result');
+
+  calcBtn.addEventListener('click', () => {
+    const stake = parseFloat(stakeInput.value);
+    const odds = parseFloat(oddsInput.value);
+
+    if (isNaN(stake) || isNaN(odds) || stake <= 0 || odds <= 1) {
+      oddsResult.textContent = "Please enter valid stake and odds.";
+      oddsResult.classList.remove('text-green-600');
+      oddsResult.classList.add('text-red-500');
+      return;
+    }
+
+    const potentialWinnings = stake * odds;
+    oddsResult.textContent = `Potential Return: $${potentialWinnings.toFixed(2)} (includes your stake)`;
+    oddsResult.classList.remove('text-red-500');
+    oddsResult.classList.add('text-green-600');
+  });
+</script>
+</body>
+</html>
