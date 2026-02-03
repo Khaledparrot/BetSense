@@ -148,7 +148,7 @@ class CustomFooter extends HTMLElement {
                         18+ Only. Gambling is not legal in all jurisdictions.
                     </div>
                     <div class="footer-copyright">
-                        &copy; 2025 Parisur Academy. All rights reserved.
+                        &copy; 2026 Parisur Academy. All rights reserved.
                     </div>
                 </div>
             </div>
